@@ -24,6 +24,7 @@ jobs:
           teamsapp -h
           npm install
           npm run build
+          teamsapp package
 
       - name: Notify Teams on Success
         if: success()
