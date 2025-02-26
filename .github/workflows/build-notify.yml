@@ -21,7 +21,7 @@ jobs:
       - name: Install and Build Project
         run: |
           npm install -g @microsoft/teamsapp-cli
-          teams -h
+          teamsapp -h
           npm install
           npm run build
 
@@ -35,4 +35,4 @@ jobs:
         run: |
           teams message send --url ${{ secrets.TEAMS_WEBHOOK }} --message "❌ Build Failed for commit ${{ github.sha }} on branch ${{ github.ref_name }}"
 
-          
+
